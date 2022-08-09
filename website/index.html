@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container a-container" id="a-container">
+        <form class="form" id="a-form" method="" action="">
+          <h2 class="form_title title">Recent Count</h2>
+          <div class="form__input" id="Recent_Bolt">
+            <br>
+            <label>Part&emsp;&hairsp;:</label>
+            <label class="part" id="Recent__Bolt">Bolt</label>
+            <br>
+            <br>
+            <label>Count&hairsp;&hairsp;:</label>
+            <label class="non__defective" id="Recent__Bolt__Count">0</label>
+            
+          </div>
+          <div class="form__input" id="Recent_Lollipop">
+            <br>
+            <label>Part&emsp;&hairsp;:</label>
+            <label class="part" id="Recent__Lollipop">Lollipop</label>
+            <br>
+            <br>
+            <label>Count&hairsp;&hairsp;:</label>
+            <label class="non__defective" id="Recent__Lollipop__Count">0</label>
+          </div>
+          <div class="form__input" id="Recent_Washer">
+            <br>
+              <label>Part&emsp;&hairsp;:</label>
+              <label class="part" id="Recent__Washer">Washer</label>
+            <br>
+            <br>
+              <label>Count&hairsp;&hairsp;:</label>
+              <label class="non__defective" id="Recent__Washer__Count">0</label>
+            <br>
+          </div>
+          <div class="form__input" id="Recent_Faulty_Washer">
+            <br>
+              <label>Part&emsp;&hairsp;:</label>
+              <label class="part" id="Recent__Faulty_Washer">Faulty Washer</label>
+            <br>
+            <br>
+              <label>Count&hairsp;&hairsp;:</label>
+              <label class="defective" id="Recent__Faulty_Washer__Count">0</label>
+            <br>
+          </div>
+          
+        </form>
+      </div>
+      <div class="container b-container" id="b-container">
+        <form class="form" id="b-form" method="" action="">
+          <h2 class="form_title title">Current Count</h2>
+          <div class="form__input" id="Current_Bolt">
+            <br>
+            <label>Part&emsp;&hairsp;:</label>
+            <label class="part" id="Current__Bolt">Bolt</label>
+            <br>
+            <br>
+            <label>Count&hairsp;&hairsp;:</label>
+            <label class="non__defective" id="Current__Bolt__Count">0</label>
+            
+          </div>
+          <div class="form__input" id="Current_Lollipop">
+            <br>
+            <label>Part&emsp;&hairsp;:</label>
+            <label class="part" id="Current__Lollipop">Lollipop</label>
+            <br>
+            <br>
+            <label>Count&hairsp;&hairsp;:</label>
+            <label class="non__defective" id="Current__Lollipop__Count">0</label>
+          </div>
+          <div class="form__input" id="Current_Washer">
+            <br>
+              <label>Part&emsp;&hairsp;:</label>
+              <label class="part" id="Current__Washer">Washer</label>
+            <br>
+            <br>
+              <label>Count&hairsp;&hairsp;:</label>
+              <label class="non__defective" id="Current__Washer__Count">0</label>
+            <br>
+          </div>
+          <div class="form__input" id="Current_Faulty_Washer">
+            <br>
+              <label>Part&emsp;&hairsp;:</label>
+              <label class="part" id="Current__Faulty_Washer">Faulty Washer</label>
+            <br>
+            <br>
+              <label>Count&hairsp;&hairsp;:</label>
+              <label class="defective" id="Current__Faulty_Washer__Count">0</label>
+            <br>
+          </div>
+        </form>
+      </div>
+      <div class="switch" id="switch-cnt">
+        <div class="switch__circle"></div>
+        <div class="switch__circle switch__circle--t"></div>
+        <div class="switch__container" id="switch-c1">
+          <button class="switch__button button switch-btn" onclick="start()">START COUNT</button>
+        </div>
+        <div class="switch__container is-hidden" id="switch-c2">
+          <button class="switch__button button switch-btn" onclick="stop()">STOP COUNT</button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
